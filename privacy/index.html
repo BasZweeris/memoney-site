@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacyverklaring – MeMoney</title>
+  <meta name="description" content="Voorlopige privacyverklaring van MeMoney en de bankkoppeling.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="../">MeMoney</a>
+  </header>
+
+  <main>
+    <h1>Privacyverklaring</h1>
+    <p class="meta">Voorlopige versie van 25 oktober 2026</p>
+
+    <div class="notice">
+      <strong>Voorlopig.</strong> Deze privacyverklaring geldt alleen voor eigen gebruik tijdens de ontwikkeling
+      van MeMoney. De definitieve versie verschijnt op dit adres bij de eerste release.
+    </div>
+
+    <h2>Wie is verantwoordelijk</h2>
+    <p>
+      Verantwoordelijk voor de verwerking van persoonsgegevens in MeMoney is Bas Zweeris.
+      Voor vragen over privacy of het uitoefenen van je rechten kun je mailen naar
+      <a href="mailto:bas@memoney.nl">bas@memoney.nl</a>.
+    </p>
+
+    <h2>Waar je gegevens staan</h2>
+    <p>
+      Je planning (rekeningen, transacties, overboekingen en reeksen) staat op je toestel en, als je
+      iCloud gebruikt, in je eigen iCloud-account. Daar kunnen wij niet bij. Voor het plannen en afvinken
+      heb je geen account nodig en verwerken wij geen persoonsgegevens.
+    </p>
+    <p>
+      Alleen voor de bankkoppeling, die optioneel is, maak je een account aan en verwerkt de server van
+      MeMoney een beperkte set gegevens. Daarover gaat de rest van deze verklaring.
+    </p>
+
+    <h2>Welke gegevens en waarom</h2>
+    <ul>
+      <li>
+        <strong>Je account.</strong> Je logt in met Sign in with Apple. De server bewaart de identificatie
+        die Apple voor MeMoney aanmaakt, je naam zoals Apple die bij de eerste aanmelding doorgeeft, en je
+        e-mailadres; kies je bij Apple voor "Verberg mijn e-mail", dan is dat een doorstuuradres van Apple.
+        Dit is nodig om je bankkoppelingen aan jou te koppelen en alleen aan jou te tonen.
+      </li>
+      <li>
+        <strong>Je bankkoppelingen.</strong> Per koppeling bewaart de server het sessie-id van Enable Banking
+        (de sleutel waarmee je bank gegevens vrijgeeft), de naam en het land van de bank, de status en de
+        geldigheid van je toestemming, en de rekening-codes die Enable Banking aan de vrijgegeven rekeningen
+        geeft. Daarmee kan de server controleren dat een rekening bij jou hoort en saldo en afschriften voor
+        je ophalen.
+      </li>
+      <li>
+        <strong>Je abonnementsrecht.</strong> Of je de bankkoppeling mag gebruiken en tot wanneer.
+      </li>
+      <li>
+        <strong>Saldo en afschriften.</strong> De server haalt deze op bij je bank en geeft ze direct door
+        aan de app, zonder ze te bewaren, ook niet tijdelijk. Ze worden alleen opgeslagen op je toestel en in
+        je eigen iCloud.
+      </li>
+      <li>
+        <strong>Technische logboeken.</strong> Bij elke aanroep van de server legt Supabase technische
+        gegevens vast, zoals het tijdstip, de aangeroepen functie en eventuele foutmeldingen, voor beheer en
+        het oplossen van storingen.
+      </li>
+    </ul>
+    <p>
+      De server bewaart bewust geen rekeningnummers (IBAN), rekeningnamen, saldo's, afschriften of je
+      planning.
+    </p>
+
+    <h2>Grondslag</h2>
+    <p>
+      We verwerken deze gegevens omdat dat nodig is om de bankkoppeling te leveren die je zelf aanzet
+      (uitvoering van een overeenkomst, artikel 6 lid 1 sub b AVG). Daarnaast geef je bij elke koppeling
+      zelf uitdrukkelijk toestemming bij je bank voor het inzien van de rekeningen die je kiest; die
+      toestemming verloopt na de termijn die de bank aangeeft en je kunt haar altijd intrekken door te
+      ontkoppelen.
+    </p>
+
+    <h2>Wie de gegevens verder verwerken</h2>
+    <ul>
+      <li>
+        <strong>Supabase</strong> (Supabase, Inc.) host de server en het account. De gegevens staan in
+        de regio Frankfurt, Duitsland.
+      </li>
+      <li>
+        <strong>Enable Banking</strong> (Enable Banking Oy, Finland) legt de verbinding met je bank. Enable
+        Banking is als rekeninginformatiedienstverlener onder PSD2 geregistreerd bij de Finse
+        financiële toezichthouder (FIN-FSA). Je logt bij je eigen bank in; MeMoney krijgt je
+        inloggegevens nooit te zien.
+      </li>
+      <li>
+        <strong>Apple</strong> verzorgt Sign in with Apple, iCloud voor het synchroniseren van je planning
+        en afschriften tussen je toestellen, en de App Store. Daarvoor gelden de voorwaarden en de
+        privacyverklaring van Apple.
+      </li>
+    </ul>
+    <p>We verkopen geen gegevens en delen ze niet met adverteerders.</p>
+
+    <h2>Hoe lang</h2>
+    <p>
+      De gegevens van een bankkoppeling blijven bewaard tot je die koppeling ontkoppelt; dan beëindigt de
+      server ook de sessie bij Enable Banking. Je account blijft bestaan tot je het verwijdert. Tijdens de
+      ontwikkeling kan dat nog niet in de app; mail dan naar het adres hierboven.
+      Wat op je toestel en in je iCloud staat, beheer je zelf.
+    </p>
+
+    <h2>Opslag in de EU</h2>
+    <p>
+      De gegevens op de server staan in de Europese Unie, in Frankfurt. Voor je toestel en iCloud gelden
+      de afspraken die je met Apple hebt.
+    </p>
+
+    <h2>Je rechten</h2>
+    <p>
+      Je hebt het recht op inzage, correctie en verwijdering van je gegevens, op beperking van de
+      verwerking, op overdraagbaarheid en om bezwaar te maken. Stuur je verzoek naar het e-mailadres
+      hierboven; je krijgt binnen een maand antwoord. Ben je niet tevreden over hoe we met je gegevens
+      omgaan, dan kun je een klacht indienen bij de Autoriteit Persoonsgegevens.
+    </p>
+
+    <h2>Wijzigingen</h2>
+    <p>
+      Deze verklaring wordt vóór de eerste release vervangen door een definitieve versie op dit adres.
+      De datum bovenaan laat zien welke versie je leest.
+    </p>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../voorwaarden/">Voorwaarden</a>
+    </nav>
+  </footer>
+</body>
+</html>
