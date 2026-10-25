@@ -46,7 +46,9 @@ En stap 4, zodra het certificaat er is:
 gh api -X PUT repos/BasZweeris/memoney-site/pages -F https_enforced=true
 ```
 
-## DNS-records bij de registrar
+## DNS-records
+
+De DNS-zone van memoney.app staat in Azure DNS (nameservers `ns1-07.azure-dns.com` e.a.), in beheer van de compagnon van de ontwikkelaar; wijzigingen gaan via hem. Ingesteld en gecontroleerd op 25 oktober 2026: de vier A-records en de CNAME voor `www`, zonder AAAA-records; het certificaat is uitgegeven en HTTPS wordt afgedwongen.
 
 Voor het apex-domein `memoney.app` vier A-records (IPv4) en, aanbevolen, vier AAAA-records (IPv6); voor `www` een CNAME naar de standaard Pages-host van het account. Met beide ingesteld stuurt GitHub `www.memoney.app` automatisch door naar `memoney.app`.
 
@@ -65,9 +67,9 @@ Voor het apex-domein `memoney.app` vier A-records (IPv4) en, aanbevolen, vier AA
 Aandachtspunten:
 - **Geen wildcard-record** (`*.memoney.app`): GitHub raadt dat sterk af vanwege het risico op overname van subdomeinen.
 - De CNAME voor `www` wijst naar `baszweeris.github.io`, **zonder** repositorynaam, en niet naar het `*.pages.github.io`-adres dat de Pages-instellingen soms tonen.
-- Haal eventuele bestaande A-, AAAA- of doorstuurrecords van de registrar (parkeerpagina) voor `@` en `www` weg.
+- Geen andere A-, AAAA- of CNAME-records voor `@` en `www` ernaast (vroeger wezen ze naar een Azure web app).
 - `.app` is een HTTPS-only-domein: browsers openen `memoney.app` alleen via HTTPS. De site is dus pas bereikbaar zodra GitHub het certificaat heeft uitgegeven, ook als de DNS al klopt.
-- Optioneel en aanbevolen: het domein **verifiëren** onder GitHub → profiel **Settings** → **Pages** → *Add a domain*. GitHub geeft dan een TXT-record voor `_github-pages-challenge-baszweeris.memoney.app` (bij de registrar meestal naam `_github-pages-challenge-baszweeris`) met een code als waarde; zet het, klik **Verify** en laat het record daarna staan. Dan kunnen alleen repositories van dit account een site op `memoney.app` en zijn directe subdomeinen publiceren, ook als Pages later uit staat.
+- Optioneel en aanbevolen: het domein **verifiëren** onder GitHub → profiel **Settings** → **Pages** → *Add a domain*. GitHub geeft dan een TXT-record voor `_github-pages-challenge-baszweeris.memoney.app` (in de zone naam `_github-pages-challenge-baszweeris`) met een code als waarde; zet het, klik **Verify** en laat het record daarna staan. Dan kunnen alleen repositories van dit account een site op `memoney.app` en zijn directe subdomeinen publiceren, ook als Pages later uit staat.
 
 Controleren of de records staan:
 
