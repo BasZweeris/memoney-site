@@ -14,7 +14,7 @@
 
   <main>
     <h1>Privacyverklaring</h1>
-    <p class="meta">Voorlopige versie van 25 oktober 2026</p>
+    <p class="meta">Voorlopige versie van 15 november 2026</p>
 
     <div class="notice">
       <strong>Voorlopig.</strong> Deze privacyverklaring geldt alleen voor eigen gebruik tijdens de ontwikkeling
@@ -53,6 +53,13 @@
         geldigheid van je toestemming, en de rekening-codes die Enable Banking aan de vrijgegeven rekeningen
         geeft. Daarmee kan de server controleren dat een rekening bij jou hoort en saldo en afschriften voor
         je ophalen.
+      </li>
+      <li>
+        <strong>Een kenmerk per rekening.</strong> Per vrijgegeven rekening bewaart de server ook het kenmerk
+        dat Enable Banking meegeeft: een hash, afgeleid van de gegevens waarmee je bank de rekening
+        identificeert, die zelf geen rekeningnummer of naam bevat. Daarmee herkent de server dat je voor
+        dezelfde rekeningen al een koppeling hebt, zodat je niet ongemerkt twee toestemmingen naast elkaar
+        geeft. Het kenmerk wordt met de koppeling verwijderd.
       </li>
       <li>
         <strong>Je abonnementsrecht.</strong> Of je de bankkoppeling mag gebruiken en tot wanneer.
